@@ -1,0 +1,5 @@
+docs/* linguist-documentation=true
+target/* linguist-generated=true
+
+README.org linguist-documentation=true
+LICENSE linguist-documentation=true

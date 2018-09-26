@@ -1,0 +1,62 @@
+#+TITLE:Nabab [[https://img.shields.io/clojars/v/nabab.svg]]
+
+https://clojars.org/nabab
+
+French word _nabab_ comes from نواب and refers to an Indian ruler
+within the Mogul empire.
+
+The name of this lightweighted library stands for Not an
+ABstraction ABove. Its mere goal is to handle vars created by
+=core.async= and describe how data flow between channels.
+
+* Links
+
+- [[https://github.com/piotr-yuxuan/nabab/blob/master/LITTERATE_SOURCE.org][Litterate source]] with syntactic hilighting
+- [[https://github.com/halgari/naiad][Naiad]] might better fit your needs, check it.
+- [[https://github.com/piotr-yuxuan/nabab][GitHub repository]]
+
+* Rationale
+
+** =core.async= is simple but not easy
+
+From [[https://github.com/halgari/naiad][Naiad]]:
+
+#+BEGIN_QUOTE
+=core.async= is simple but not easy. That is to say, it is possible to
+write simple maintainable using core.async but it is not a easy task.
+#+END_QUOTE
+
+=core.async= is great. However, when using it, I've always been
+puzzled by code organisation problem: where to keep channel Vars so
+they're both simple to retrieve and reason about?
+
+** A graph is quite easy to grasp
+
+I've chosen a declarative, data-oriented approach based on a graph
+representation of the data flow:
+
+- A channel is pictured as a node of the graph when data reside before
+  being processed.
+- Processing functions (such as =pipeline=, =go-loop=, and =pipe=) are
+  edges of this graph. In nabab they are called =::transitions=.
+- Most of the time a message is delivered to one channel but sometimes
+  you need to dispatch it to several ones. This nicely fits the
+  publisher-subscriber architecture pattern.
+
+Because this is a graph, you can analyse it with any graph processing
+tool. Because a graph is visual, it's much more easy to grasp. Because
+publisher-subscriber is naturally implemented atop channels in
+=core.async=, this design choice is idiomatic and doesn't prevent you
+to design your architecture the way you want.
+
+Nabab implements this representation.
+
+** Why not [[https://github.com/halgari/naiad][Naiad]]
+
+Why haven't I used [[https://github.com/halgari/naiad][Naiad]]?
+
+- Writing a library is a great exercice
+- It doesn't provide visualisation capability
+- It's abstraction over =core.async= but I don't want it. I just want
+  raw =core.async= with a lightweight tool to make code structure
+  simpler and more legible.

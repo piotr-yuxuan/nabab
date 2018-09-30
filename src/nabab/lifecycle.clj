@@ -46,7 +46,8 @@
   [description]
   (let [publisher (or (:nabab/publisher description)
                       (chan (:nabab/fixed-buffer-size description)))
-        publication (pub publisher (:nabab/dispatch-ifn description))
+        publication (or (:nabab/publication description)
+                        (pub publisher (:nabab/dispatch-ifn description)))
         description (-> description
                         (assoc :nabab/publisher publisher)
                         (assoc :nabab/publication publication)

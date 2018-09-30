@@ -1,4 +1,4 @@
-(defproject nabab "1.0.1-SNAPSHOT"
+(defproject nabab "1.0.2"
   :description "Describe how data flow between core.async channels with a pinch of syntactic sugar"
   :url "https://github.com/piotr-yuxuan/nabab"
   :dependencies [[org.clojure/core.async "0.4.474"]

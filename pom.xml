@@ -17,7 +17,7 @@
     <url>https://github.com/piotr-yuxuan/nabab</url>
     <connection>scm:git:git://github.com/piotr-yuxuan/nabab.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/piotr-yuxuan/nabab.git</developerConnection>
-    <tag>5b49d8aa02876063fa2596e348925da5102f750a</tag>
+    <tag>5266aa3da72e47a2504fbda2e7d67129792e988f</tag>
   </scm>
   <build>
     <sourceDirectory>src</sourceDirectory>

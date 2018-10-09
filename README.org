@@ -1,3 +1,7 @@
+#+BEGIN_QUOTE
+If you need help, or have any question, I'll be more than happy to refactor the doc or answer your issues.
+#+END_QUOTE
+
 #+TITLE:Nabab [[https://img.shields.io/clojars/v/nabab.svg]]
 
 https://clojars.org/nabab

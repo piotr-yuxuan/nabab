@@ -1,0 +1,8 @@
+Checking dependencies for stdin...
+  using nvd-clojure: 2.5.0 and dependency-check: 7.0.4
+
+0 vulnerabilities detected. Severity: NONE
+Detailed reports saved in: /home/runner/work/nabab/nabab/target/nvd
+HTML report : /home/runner/work/nabab/nabab/target/nvd/dependency-check-report.html
+
+   *** THIS REPORT IS WITHOUT WARRANTY ***

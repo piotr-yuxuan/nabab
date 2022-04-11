@@ -1,9 +1,9 @@
 ;; Generated from litterate programming file `README.org`.
 (ns nabab.lifecycle
   "Manage lifecycle of a nabab graph"
-  (:require [clojure.core.async :refer [close! chan go go-loop pub sub <! >! pipe pipeline]]
-            [clojure.spec.alpha :as spec]
-            [nabab.specs :as specs]))
+  (:require [nabab.specs :as specs]
+            [clojure.core.async :refer [close! chan go go-loop pub sub <! >! pipe pipeline]]
+            [clojure.spec.alpha :as spec]))
 
 (defn topics->subscriptions!
   "Subscribe a `subscriber` channel to topics of a `publication`."

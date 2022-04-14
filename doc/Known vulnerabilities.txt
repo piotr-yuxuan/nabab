@@ -1,7 +1,12 @@
 Checking dependencies for stdin...
   using nvd-clojure: 2.5.0 and dependency-check: 7.0.4
++------------------------+----------------+
+| dependency             | status         |
++------------------------+----------------+
+| core.async-0.4.474.jar | CVE-2021-43138 |
++------------------------+----------------+
 
-0 vulnerabilities detected. Severity: NONE
+1 vulnerabilities detected. Severity: MEDIUM
 Detailed reports saved in: /home/runner/work/nabab/nabab/target/nvd
 HTML report : /home/runner/work/nabab/nabab/target/nvd/dependency-check-report.html
 

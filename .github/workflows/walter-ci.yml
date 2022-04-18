@@ -7,7 +7,12 @@
 name: Walter CI
 'on':
   repository_dispatch: null
-  workflow_dispatch: null
+  workflow_dispatch:
+    inputs:
+      walter-version:
+        description: Walter version
+        required: false
+        type: string
   schedule:
   - cron: 28 6,18 * * *
 concurrency:
@@ -20,6 +25,7 @@ env:
   GIT_COMMITTER_EMAIL: ${{ secrets.WALTER_GIT_EMAIL }}
   GIT_COMMITTER_NAME: ${{ secrets.WALTER_AUTHOR_NAME }}
   GIT_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+  WALTER_VERSION: ${{ github.event.inputs.walter-version }}
 jobs:
   conform-repository:
     runs-on: ubuntu-latest
@@ -94,6 +100,7 @@ jobs:
       continue-on-error: true
     - run: clojure -T:security/nvd nvd.task/check :classpath '"'"$(lein with-profile -user,-dev classpath)"'"'
       continue-on-error: true
+    - run: bb "$HOME/.walter-ci/cut-nvd.clj" ./target/nvd/dependency-check-report.csv
     - run: cp ./target/nvd/dependency-check-report.csv ./doc/known-vulnerabilities.csv
     - run: git add ./doc/known-vulnerabilities.csv
     - run: git diff --staged --exit-code

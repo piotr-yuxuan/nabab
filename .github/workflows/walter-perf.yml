@@ -10,7 +10,7 @@ name: Walter Perf
   workflow_dispatch:
     inputs:
       walter-version:
-        description: Walter version
+        description: Walter bin version
         required: false
         type: string
   schedule:

@@ -1,8 +1,8 @@
 ;; Generated from litterate programming file `README.org`.
 (ns nabab.specs
   "Formal definitions of nabab domain concepts"
-  (:require [clojure.spec.alpha :as spec]
-            [clojure.core.async.impl.channels :refer [chan]]))
+  (:require [clojure.core.async.impl.channels :refer [chan]]
+            [clojure.spec.alpha :as spec]))
 
 (def chan-type
   (type (chan 0)))

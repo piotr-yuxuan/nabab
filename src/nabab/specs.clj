@@ -1,10 +1,13 @@
 ;; Generated from litterate programming file `README.org`.
 (ns nabab.specs
   "Formal definitions of nabab domain concepts"
-  (:require [clojure.spec.alpha :as spec])
-  (:import (clojure.core.async.impl.channels ManyToManyChannel)))
+  (:require [clojure.spec.alpha :as spec]
+            [clojure.core.async.impl.channels :refer [chan]]))
 
-(defn chan? [c] (instance? ManyToManyChannel c))
+(def chan-type
+  (type (chan 0)))
+
+(defn chan? [c] (instance? chan-type c))
 
 (spec/def ::nabab-graph (spec/keys :req [:nabab/fixed-buffer-size
                                          :nabab/publication

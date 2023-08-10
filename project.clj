@@ -9,15 +9,15 @@
   :pom-addition [:developers [:developer
                               [:name "胡雨軒 Петр"]
                               [:url "https://github.com/piotr-yuxuan"]]]
-  :dependencies [[org.clojure/core.async "1.5.648"]]
+  :dependencies [[org.clojure/core.async "1.6.681"]]
   :plugins [[lein-cljsbuild "1.1.8"]
             [lein-shell "0.5.0"]]
   :aot :all
   :profiles {:github {:github/topics ["core-async" "clojure" "async" "channels"]
                       :github/private? false}
-             :provided {:dependencies [[org.clojure/clojure "1.12.0-alpha1"]
-                                       [io.confluent/kafka-avro-serializer "7.2.2"]
-                                       [org.apache.avro/avro "1.11.1"]]}
+             :provided {:dependencies [[org.clojure/clojure "1.12.0-alpha4"]
+                                       [io.confluent/kafka-avro-serializer "7.4.1"]
+                                       [org.apache.avro/avro "1.11.2"]]}
              :dev {:global-vars {*warn-on-reflection* true}}}
   :repositories [["confluent" {:url "https://packages.confluent.io/maven/"}]]
   :deploy-repositories [["clojars" {:sign-releases false

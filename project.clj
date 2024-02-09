@@ -16,7 +16,7 @@
   :profiles {:github {:github/topics ["core-async" "clojure" "async" "channels"]
                       :github/private? false}
              :provided {:dependencies [[org.clojure/clojure "1.12.0-alpha7"]
-                                       [io.confluent/kafka-avro-serializer "7.5.3"]
+                                       [io.confluent/kafka-avro-serializer "7.6.0"]
                                        [org.apache.avro/avro "1.11.3"]]}
              :dev {:global-vars {*warn-on-reflection* true}}}
   :repositories [["confluent" {:url "https://packages.confluent.io/maven/"}]]

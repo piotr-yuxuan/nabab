@@ -9,7 +9,7 @@
   :pom-addition [:developers [:developer
                               [:name "胡雨軒 Петр"]
                               [:url "https://github.com/piotr-yuxuan"]]]
-  :dependencies [[org.clojure/core.async "1.8.711-beta1"]]
+  :dependencies [[org.clojure/core.async "1.8.718-beta2"]]
   :plugins [[lein-cljsbuild "1.1.8"]
             [lein-shell "0.5.0"]]
   :aot :all

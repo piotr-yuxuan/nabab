@@ -1,6 +1,6 @@
 Library name,Version,License name
 "org.clojure/clojure","1.11.4","Eclipse Public License 1.0"
-"org.clojure/core.async","1.8.711-beta1","Eclipse Public License 1.0"
+"org.clojure/core.async","1.8.718-beta2","Eclipse Public License 1.0"
 "org.clojure/core.cache","1.1.234","Eclipse Public License 1.0"
 "org.clojure/core.memoize","1.1.266","Eclipse Public License 1.0"
 "org.clojure/core.specs.alpha","0.2.62","Eclipse Public License 1.0"

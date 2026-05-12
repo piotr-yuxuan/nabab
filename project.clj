@@ -15,7 +15,7 @@
   :aot :all
   :profiles {:github {:github/topics ["core-async" "clojure" "async" "channels"]
                       :github/private? false}
-             :provided {:dependencies [[org.clojure/clojure "1.12.5-rc1"]
+             :provided {:dependencies [[org.clojure/clojure "1.12.5"]
                                        [io.confluent/kafka-avro-serializer "8.2.0"]
                                        [org.apache.avro/avro "1.12.1"]]}
              :dev {:global-vars {*warn-on-reflection* true}}}

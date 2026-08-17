@@ -17,7 +17,7 @@
                       :github/private? false}
              :provided {:dependencies [[org.clojure/clojure "1.13.0-alpha6"]
                                        [io.confluent/kafka-avro-serializer "8.3.1"]
-                                       [org.apache.avro/avro "1.12.1"]]}
+                                       [org.apache.avro/avro "1.12.2"]]}
              :dev {:global-vars {*warn-on-reflection* true}}}
   :repositories [["confluent" {:url "https://packages.confluent.io/maven/"}]]
   :deploy-repositories [["clojars" {:sign-releases false
